@@ -1,6 +1,7 @@
 package com.co.choucair.tasks;
 
 import com.co.choucair.models.UserLoombokData;
+import com.co.choucair.questions.ValidateUrl;
 import com.co.choucair.userinterfaces.SerenityLoginPage;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
@@ -28,6 +29,7 @@ public class Login implements Task {
                 Enter.theValue(userLoombokData.getPass()).into(SerenityLoginPage.TXT_PASS),
                 JavaScriptClick.on(SerenityLoginPage.BTN_SUBMIT),
                 WaitUntil.the(SerenityLoginPage.TXT_VALIDATION, isVisible()).forNoMoreThan(10).seconds()
+
         );
     }
 
