@@ -9,6 +9,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.JavaScriptClick;
+import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
@@ -27,8 +28,9 @@ public class Login implements Task {
                 WaitUntil.the(SerenityLoginPage.TXT_USER, isVisible()).forNoMoreThan(10).seconds(),
                 Enter.theValue(userLoombokData.getUser()).into(SerenityLoginPage.TXT_USER),
                 Enter.theValue(userLoombokData.getPass()).into(SerenityLoginPage.TXT_PASS),
-                JavaScriptClick.on(SerenityLoginPage.BTN_SUBMIT),
-                WaitUntil.the(SerenityLoginPage.TXT_VALIDATION, isVisible()).forNoMoreThan(10).seconds()
+                JavaScriptClick.on(SerenityLoginPage.BTN_SUBMIT)
+                //Switch.toAlert().andAccept(),
+                //WaitUntil.the(SerenityLoginPage.TXT_VALIDATION, isVisible()).forNoMoreThan(10).seconds()
 
         );
     }

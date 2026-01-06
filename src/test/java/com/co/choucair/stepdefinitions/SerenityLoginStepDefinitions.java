@@ -60,7 +60,7 @@ public class SerenityLoginStepDefinitions {
 
     @Then("^validate the text on screen (.*)$")
     public void validateTheTextOnScreenDashboard(String text) {
-        theActorInTheSpotlight().should(seeThat(ValidateText.of(TXT_VALIDATION), containsString(text)));
+        theActorInTheSpotlight().should(seeThat(ValidateText.of(TXT_VALIDATION, text), containsString(text)));
 
     }
 

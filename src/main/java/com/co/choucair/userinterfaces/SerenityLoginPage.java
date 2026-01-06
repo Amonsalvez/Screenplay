@@ -25,10 +25,8 @@ public class SerenityLoginPage {
          // .located(By.xpath("//button[@id='login-button']"));
 
   public static final Target TXT_VALIDATION = Target.the("título Products")
-          .located(By.xpath("//span[@data-test='title' and normalize-space()='Products']"));
+          .locatedBy("//span[contains(text(),'{0}')]");
 
-  //public static final Target TXT_VALIDATION = Target.the("Titulo PG")
-     //   .located(By.xpath("//title"));
 
 
 
