@@ -20,7 +20,6 @@ public class ValidateText implements Question<String> {
     public String answeredBy(Actor actor) {
         Target TXT_PRODUCTS = element.of(text);
         String texto = Text.of(TXT_PRODUCTS).answeredBy(actor);
-        //System.out.println("El texto productes es:"+ actor.asksFor(Text.of(element.of(text))));
         return texto;
     }
 

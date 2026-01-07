@@ -1,3 +1,4 @@
+@loggin
 Feature: login test
 
   Scenario Outline: testing the successful login

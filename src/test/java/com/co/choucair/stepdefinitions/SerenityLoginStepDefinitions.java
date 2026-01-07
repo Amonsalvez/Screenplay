@@ -35,17 +35,6 @@ import static org.hamcrest.Matchers.containsString;
 
 public class SerenityLoginStepDefinitions {
 
-    @Before
-    public void setup() {
-        OnStage.setTheStage(new OnlineCast());
-    }
-
-    @After
-    public static void CloseDriver() throws IOException, InterruptedException {
-        SerenityWebdriverManager.inThisTestThread().getCurrentDriver().quit();
-        KillBrowser.processes(List.of((SerenityWebdriverManager.inThisTestThread().getCurrentDriverName()).split(":")).get(0));
-    }
-
     @Given("the user is on the serenity demo page")
     public void theUserIsOnTheSerenityDemoPage() {
         OnStage.theActorCalled(ACTOR).wasAbleTo(Open.url(URL));

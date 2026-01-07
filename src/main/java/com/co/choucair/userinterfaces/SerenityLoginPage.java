@@ -21,9 +21,6 @@ public class SerenityLoginPage {
   public static final Target BTN_SUBMIT = Target.the("botón de enviar")
           .located(By.id("login-button"));
 
-  //public static final Target BTN_SUBMIT = Target.the("txt")
-         // .located(By.xpath("//button[@id='login-button']"));
-
   public static final Target TXT_VALIDATION = Target.the("título Products")
           .locatedBy("//span[contains(text(),'{0}')]");
 
